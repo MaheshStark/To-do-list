@@ -1,0 +1,9 @@
+body{
+    background-color: lightsalmon;
+}
+.mainDiv{
+    border: solid black 1px;
+    /* height: 1000px; */
+    border-radius: 5px;
+
+}
