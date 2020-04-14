@@ -7,7 +7,7 @@
 //              </tr>
 
 function addTOlist() {
-    let todo = document.getElementById('todotext');
+    let todo = document.getElementById('todotext').value;   
     console.log(todo);
     
     let tbl = document.getElementById('tableTodo');
@@ -26,7 +26,7 @@ function addTOlist() {
 
     let lbl = document.createElement('label');
     lbl.className = 'ml-1';
-    lbl.innerHTML=document.getElementById('todotext').innerText;
+    lbl.innerHTML=document.getElementById('todotext').value;
 
     let a1 = document.createElement('a');
 
