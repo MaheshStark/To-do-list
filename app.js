@@ -24,35 +24,41 @@ function addTOlist() {
             document.getElementById('altTextForTodotext').innerHTML="This task is already added!";
             document.getElementById('add').classList.remove("mb-3");
         } else {
+            document.getElementById('todotext').value="";
             let tbl = document.getElementById('tableTodo');
             document.getElementById('todotext').classList.remove("is-invalid");
             document.getElementById('altTextForTodotext').innerHTML="";
             document.getElementById('add').classList.add("mb-3");
             let tr = document.createElement('tr');
             tr.className = 'table-success col-lg-10 mb-2 border border-light rounded mb-1';
+            tr.id=rows.length+1;
             let td1 = document.createElement('td');
-            td1.className = 'pb-2 pt-2 col-lg-10';
+            td1.className = 'col-lg-11';
 
             let td2 = document.createElement('td');
-            td2.className = 'pb-2 pt-2 col-lg-1';
+            td2.className = 'col-lg-1';
+
+            let btnDone= document.createElement('button');
+            btnDone.className = 'doneCaller btn btns btn-success col-lg-12';
+            // btnDone.id=rows.length+1;
+            btnDone.setAttribute('onClick', 'doneTask(this.parentNode.parentNode.id)');
 
             let td3 = document.createElement('td');
-            td3.className = 'pb-2 pt-2 col-lg-1';
+            td3.className = 'col-lg-1 ';
+
+            let btnRemove= document.createElement('button');
+            btnRemove.className = 'deleteCaller btn btns btn-danger col-lg-12';
+            // btnRemove.id=rows.length+1;
+            btnRemove.setAttribute('onClick', 'removeTask(this.parentNode.parentNode.id)');
 
             let lbl = document.createElement('label');
             lbl.className = 'ml-1';
             lbl.innerHTML=todo;
 
-            let a1 = document.createElement('a');
-            a1.href="dffdf";
 
             let chk = document.createElement('i');
             chk.className = 'far fa-check-circle text-center';
 
-
-            let a2 = document.createElement('a');
-            a2.href="javascript:removeTask(this)";
-            // a2.onclick=removeTask(this);
 
             let del = document.createElement('i');
             del.className = 'fas fa-trash-alt text-center';
@@ -62,19 +68,28 @@ function addTOlist() {
             tr.appendChild(td2);
             tr.appendChild(td3);
             td1.appendChild(lbl);
-            td2.appendChild(a1);
-            td3.appendChild(a2);
-            a1.appendChild(chk);
-            a2.appendChild(del);
+            td2.appendChild(btnDone);
+            td3.appendChild(btnRemove);
+            btnDone.appendChild(chk);
+            btnRemove.appendChild(del);
+
+           let rowsIntbl = document.getElementsByTagName("tr");
+            adddListner(rowsIntbl.length);
         }
+        
     }
     
     
 }   
 
 function removeTask(ele) {
-    // let row = ele.parentNode;
-    // document.removeChild();
     console.log(ele);
+    document.getElementById(ele).remove(); 
+}
+function doneTask(ele) {
+    console.log(ele);
+}
+function adddListner(rowsIntbl) {
     
 }
+

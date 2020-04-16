@@ -1,5 +1,5 @@
 body{
-    background-color: lightsalmon;
+    background-color: #d6faf0;
 }
 .mainDiv{
     border: solid black 1px;
@@ -13,3 +13,8 @@ body{
 /* .task_name{
     width: 250px;
 } */
+
+.btns {
+    width: 100% !important;
+    height: 100% !important;
+}
