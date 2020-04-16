@@ -1,3 +1,4 @@
+let doneList =[];
 function addTOlist() {
     let todo = document.getElementById('todotext').value;   
     
@@ -52,7 +53,7 @@ function addTOlist() {
             btnRemove.setAttribute('onClick', 'removeTask(this.parentNode.parentNode.id)');
 
             let lbl = document.createElement('label');
-            lbl.className = 'ml-1';
+            lbl.className = 'font-weight-bold ml-1 pt-1';
             lbl.innerHTML=todo;
 
 
@@ -72,9 +73,6 @@ function addTOlist() {
             td3.appendChild(btnRemove);
             btnDone.appendChild(chk);
             btnRemove.appendChild(del);
-
-           let rowsIntbl = document.getElementsByTagName("tr");
-            adddListner(rowsIntbl.length);
         }
         
     }
@@ -87,9 +85,11 @@ function removeTask(ele) {
     document.getElementById(ele).remove(); 
 }
 function doneTask(ele) {
-    console.log(ele);
-}
-function adddListner(rowsIntbl) {
-    
+    // document.getElementById(ele).childNodes[0].childNodes[0].classList.add(".del");
+    // console.log(document.getElementById(ele).childNodes[0].childNodes[0]);
+    // console.log(ele);
+    doneList.push(document.getElementById(ele).childNodes[0].childNodes[0].innerHTML);
+    console.log(doneList);
+    document.getElementById(ele).remove(); 
 }
 
