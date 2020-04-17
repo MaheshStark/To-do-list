@@ -10,21 +10,28 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container row justify-content-center col-lg-12">
-        <div class="row to_do_container justify-content-center col-lg-10 ">
-            <div class="row mainDiv border-primary col-lg-6 justify-content-center m-5 p-2 pb-5">
-                <div class="row col-lg-11 justify-content-center">
+    <div class="row justify-content-center col-lg-12 col-sm-12">
+        <div class="row to_do_container justify-content-center col-lg-10 col-sm-12">
+            <div class="row mainDiv border-primary col-lg-6 justify-content-center m-5 p-2 pb-5 col-sm-12">
+                <div class="row col-lg-11 justify-content-center col-sm-12">
                     <h3 class="text-center pb-4">Todo list</h3>
                 </div>
-                <div class="row col-lg-11 border-primary">
-                    <div class="row col-lg-11">
+                <div class="row col-lg-11 justify-content-center">
+                   
+                    <div class="input-group col-lg-10 col-sm-11">
+                        <input type="text" id="todotext" class="form-control w-100" placeholder="Add the task" aria-label="" aria-describedby="basic-addon1">
+                        <div class="input-group-append">
+                          <button class="btn btn-primary" onclick="addTOlist()" id="add" type="button">+</button>
+                        </div>
+                      </div>
+                    <!-- <div class="row col-lg-11 col-sm-11">
                         <input id="todotext" type="text" class="form-control" placeholder="Add the task" >
                     </div>
-                    <div class="row col-lg-1">
+                    <div class="row col-lg-1 col-sm-1">
                         <button class="btn btn-primary" onclick="addTOlist()" id="add">+</button>
-                    </div> 
+                    </div>  -->
                     <span id="altTextForTodotext" class="text-danger invalid-text small pb-2"></span> 
-                    <table id="tableTodo" class="col-lg-10 ">
+                    <table id="tableTodo" class="col-lg-10 col-sm-10 ">
                         <!-- <tr class="table-success col-lg-10 ">
                             <td class="pb-2 pt-2 "><label class="ml-1">Have to eat</label></td>
                             <td class="pb-2 pt-2 "><a href="dsd"><i class="far fa-check-circle text-center"></i></a></td>

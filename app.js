@@ -85,11 +85,9 @@ function removeTask(ele) {
     document.getElementById(ele).remove(); 
 }
 function doneTask(ele) {
-    // document.getElementById(ele).childNodes[0].childNodes[0].classList.add(".del");
-    // console.log(document.getElementById(ele).childNodes[0].childNodes[0]);
-    // console.log(ele);
     doneList.push(document.getElementById(ele).childNodes[0].childNodes[0].innerHTML);
     console.log(doneList);
     document.getElementById(ele).remove(); 
 }
 
+    
