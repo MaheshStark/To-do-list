@@ -87,7 +87,8 @@ function removeTask(ele) {
 function doneTask(ele) {
     doneList.push(document.getElementById(ele).childNodes[0].childNodes[0].innerHTML);
     console.log(doneList);
-    document.getElementById(ele).remove(); 
+    // document.getElementById(ele).remove(); 
+    document.getElementById(ele).childNodes[0].childNodes[0].classList.add("text-primary");
 }
 
     
