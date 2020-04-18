@@ -25,6 +25,24 @@ body{
     width: 100% !important;
     height: 100% !important;
 }
-#footerSample{
-        
+label{
+  margin-bottom: 0px !important;
+
+}
+@media (min-width: 992px){
+  .mainlogin {
+    border: solid blue 1px;
+    border-radius: 20px;
+    background-color: #b2ccca;
+    
+}
+}
+.loggingBtn{
+  border-radius: 15px !important;
+  width: 75%;
+  
+}
+#googleLoggingBtn{
+  width: 85%;
+
 }
